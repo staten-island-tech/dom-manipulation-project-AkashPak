@@ -8,8 +8,8 @@ const DomSelectors= {
 }
 const DomSelectors1={
     form: document.querySelector("form"),
-    AlbumCover: document.querySelector(".album-cover"),
-    h3s: document.querySelector("h3")
+    AlbumCover: document.querySelector("album-cover"),
+    h3s: document.querySelectorAll("h3")
 }
 
 DomSelectors.form.addEventListener("submit",function(event){
@@ -22,8 +22,6 @@ DomSelectors.form.addEventListener("submit",function(event){
 DomSelectors1.form.addEventListener("submit",function(event){
     event.preventDefault();
     console.log(DomSelectors1.AlbumCover.value);
-
-  
 });
 
 
