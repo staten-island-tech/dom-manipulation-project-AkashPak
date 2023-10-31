@@ -1,5 +1,5 @@
 const form= document.querySelector("#form")
-console.log(form)
+console.log(form);
 
 const DomSelectors= {
     form: document.querySelector("form"),
@@ -24,4 +24,8 @@ DomSelectors1.form.addEventListener("submit",function(event){
     console.log(DomSelectors1.AlbumCover.value);
 });
 
-
+ function addCard () {
+    document.querySelector.h2s.forEach(
+        (el)=> el.textContent = DomSelectors.AlbumName.value)
+}
+console.log(addCard)
