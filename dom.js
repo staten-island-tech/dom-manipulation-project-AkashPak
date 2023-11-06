@@ -4,13 +4,14 @@ console.log(form);
 const DomSelectors= {
     form: document.querySelector("form"),
     AlbumName: document.querySelector(".album-name"),
-    h2s: document.querySelectorAll("h2") 
+    h2s: document.querySelectorAll("h2"),
+    Img: document.querySelector(".card-cover"),
+    AlbumDesc:document.querySelector(".card-descr"),
+    h3s: document.querySelectorAll("h3"),
+    h1s: document.querySelectorAll("h1")
+
 }
-const DomSelectors1={
-    form: document.querySelector("form"),
-    AlbumCover: document.querySelector("album-cover"),
-    h3s: document.querySelectorAll("h3")
-}
+
 
 DomSelectors.form.addEventListener("submit",function(event){
     event.preventDefault();
@@ -19,13 +20,20 @@ DomSelectors.form.addEventListener("submit",function(event){
         (el)=> el.textContent = DomSelectors.AlbumName.value)
 });
 
-DomSelectors1.form.addEventListener("submit",function(event){
+DomSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    console.log(DomSelectors1.AlbumCover.value);
-});
+    console.log(DomSelectors.AlbumDesc.value);
+    DomSelectors.h3s.forEach(
+        (el)=> el.textContent = DomSelectors.AlbumDesc.value)
+})
 
- function addCard () {
-    document.querySelector.h2s.forEach(
-        (el)=> el.textContent = DomSelectors.AlbumName.value)
-}
-console.log(addCard)
+DomSelectors.form.addEventListener("submit",function(event){
+    event.preventDefault();
+    console.log(DomSelectors.Img.value);
+    DomSelectors.h1s.forEach(
+        (el)=> el = DomSelectors.Img.value)
+})
+
+
+
+
