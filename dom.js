@@ -40,19 +40,15 @@ DomSelectors.form.addEventListener("submit", function(event){
     })
 
 
-function Addcard(){
-    DomSelectors.box.insertAdjacentHTML("beforeend",
-     '<input type="submit" onclick="remove()" value="Remove" id="remove"/>'
 
 
+DomSelectors.box   
     
-    
-    )
-}
+
 function remove() {
 document.querySelector("#remove");
 remove.addEventListener("click", ()=> {
-    document.location.reload();
+    document.box.reload();
 });}
 
 
