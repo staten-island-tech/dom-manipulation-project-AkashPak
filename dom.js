@@ -10,8 +10,8 @@ const DomSelectors= {
     h3s: document.querySelectorAll("h3"),
     h1s: document.querySelectorAll("h1"),
     button: document.getElementById(".submit"),
-    allinput: document.getElementById(".input"),
-    box: document.querySelector(".flex-container")
+    box: document.querySelector(".flex-container"),
+   
 
 }
 
@@ -40,15 +40,23 @@ DomSelectors.form.addEventListener("submit", function(event){
     })
 
 
-
-
-
-
 function Addcard(){
-    DomSelectors.button.addEventListener("click", function(){
-        let input=  DomSelectors.allinput.value;
-        DomSelectors.box.insertAdjacentHTML("beforeend", 
-    '<p> $(input) <p>')
-    })
-   
+    DomSelectors.box.insertAdjacentHTML("beforeend",
+     '<input type="submit" onclick="remove()" value="Remove" id="remove"/>'
+
+
+    
+    
+    )
 }
+function remove() {
+document.querySelector("#remove");
+remove.addEventListener("click", ()=> {
+    document.location.reload();
+});}
+
+
+  
+
+
+
