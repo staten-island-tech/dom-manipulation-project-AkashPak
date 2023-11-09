@@ -40,18 +40,30 @@ DomSelectors.form.addEventListener("submit", function(event){
     })
 
 
+function make() {
+   const card= {
+    an: DomSelectors.AlbumName.value,
+    ad: DomSelectors.AlbumDesc.value,
+    im: DomSelectors.Img.src}
+    return card
+}
+ 
+function AddCard(add){
 
-
-DomSelectors.box   
-    
+}
 
 function remove() {
 document.querySelector("#remove");
 remove.addEventListener("click", ()=> {
-    document.box.reload();
+    document.querySelector(button).reload();
 });}
 
+function Remove() {
+    
+    DomSelectors.AlbumDesc.value=null
+ 
 
+}
   
 
 
