@@ -21,3 +21,10 @@
  justify-content: space-evenly;
  flex-direction:column ;
 }
+.img{
+  height: 50%;
+  width:50%
+}
+
+
+

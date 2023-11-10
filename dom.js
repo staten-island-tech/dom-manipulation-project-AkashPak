@@ -1,82 +1,59 @@
-const form= document.querySelector("#form")
+const form = document.querySelector("#form");
 console.log(form);
 
-const DomSelectors= {
-    form: document.querySelector("form"),
-    AlbumName: document.querySelector(".album-name"),
-    h2s: document.querySelectorAll("h2"),
-    Img: document.querySelector(".card-cover"),
-    AlbumDesc:document.querySelector(".card-descr"),
-    h3s: document.querySelectorAll("h3"),
-    h1s: document.querySelectorAll("h1"),
-    button: document.getElementById(".submit"),
-    box: document.querySelector(".flex-container"),
-   
+const DomSelectors = {
+  form: document.querySelector("form"),
+  AlbumName: document.querySelector(".album-name"),
+  h2s: document.querySelectorAll("h2"),
+  Img: document.querySelector(".album-cover"),
+  AlbumDesc: document.querySelector(".album-descr"),
+  h1s: document.querySelectorAll("h1"),
+  button: document.getElementById(".submit"),
+  box: document.querySelector(".flex-container"),
+  tite: document.querySelector(".title"),
+  rmv: document.querySelector(".rmvbtn"),
+  finalimage: document.querySelector(".img"),
+  finaldesc: document.querySelector(".description"),
+};
 
-}
-
-
-
-DomSelectors.form.addEventListener("submit", function(event){
+function Card() {
+  DomSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
-    
-    console.log(DomSelectors.AlbumDesc.value);
-    DomSelectors.h3s.forEach(
-    (el)=> el.textContent = DomSelectors.AlbumDesc.value);
-    
-    console.log(DomSelectors.AlbumName.value);
+
+    console, log(DomSelectors.AlbumDesc.value);
     DomSelectors.h2s.forEach(
-        (el)=> el.textContent = DomSelectors.AlbumName.value)
-       
-     console.log(DomSelectors.Img.src);
-        DomSelectors.h1s.forEach(
-            (el)=> el.textContent = DomSelectors.Img.src)
-    })
+      (el) => (el.textContent = DomSelectors.AlbumDesc.value)
+    );
 
-
-<<<<<<< Updated upstream
-function make() {
-   const card= {
-    an: DomSelectors.AlbumName.value,
-    ad: DomSelectors.AlbumDesc.value,
-    im: DomSelectors.Img.src}
-    return card
-=======
-function Addcard(){
-    DomSelectors.box.insertAdjacentHTML("beforeend", 
-   "<div class='card'>Card </div>" 
-
-    
-
-
-    
-    
-    )
->>>>>>> Stashed changes
+    console.log(DomSelectors.AlbumName.value);
+    DomSelectors.h1s.forEach(
+      (el) => (el.textContent = DomSelectors.AlbumName.value)
+    );
+  });
 }
- 
-function AddCard(add){
-
+const imagead={
+  im: DomSelectors.Img.src
 }
+function Addcard(func){
+document.querySelector(".flex-container").insertAdjacentHTML("beforeend",
+`<div class="albumcard"
+<h1 class="title"></h1>
+<h2 class="description"> </h2>
+  <img src= "${func.im}" alt="" class="img" > 
+  <button class="rmvbtn">Delete</button>
+  </div>`)
+  const rembtn = document.querySelector(".rmvbtn");
+  rembtn.addEventListener("click", () => rembtn.parentElement.remove(func));
+  }
+DomSelectors.form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const FinCard = Card();
+  Addcard(FinCard);
+  remove();
+});
 
 function remove() {
-document.querySelector("#remove");
-remove.addEventListener("click", ()=> {
-    document.querySelector(button).reload();
-});}
-
-<<<<<<< Updated upstream
-function Remove() {
-    
-    DomSelectors.AlbumDesc.value=null
- 
-=======
-document.addEventListener('click', DomSelectors.button, Addcard)
-
->>>>>>> Stashed changes
-
+  DomSelectors.AlbumDesc.value = null;
+  DomSelectors.AlbumName.value = null;
+  DomSelectors.Img.src = null;
 }
-  
-
-
-
