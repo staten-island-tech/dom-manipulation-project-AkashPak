@@ -16,12 +16,6 @@ const DomSelectors= {
 }
 
 
-DomSelectors.form.addEventListener("submit",function(event){
-    event.preventDefault();
-    console.log(DomSelectors.AlbumName.value);
-    DomSelectors.h2s.forEach(
-        (el)=> el.textContent = DomSelectors.AlbumName.value)
-});
 
 DomSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
@@ -40,12 +34,25 @@ DomSelectors.form.addEventListener("submit", function(event){
     })
 
 
+<<<<<<< Updated upstream
 function make() {
    const card= {
     an: DomSelectors.AlbumName.value,
     ad: DomSelectors.AlbumDesc.value,
     im: DomSelectors.Img.src}
     return card
+=======
+function Addcard(){
+    DomSelectors.box.insertAdjacentHTML("beforeend", 
+   "<div class='card'>Card </div>" 
+
+    
+
+
+    
+    
+    )
+>>>>>>> Stashed changes
 }
  
 function AddCard(add){
@@ -58,10 +65,15 @@ remove.addEventListener("click", ()=> {
     document.querySelector(button).reload();
 });}
 
+<<<<<<< Updated upstream
 function Remove() {
     
     DomSelectors.AlbumDesc.value=null
  
+=======
+document.addEventListener('click', DomSelectors.button, Addcard)
+
+>>>>>>> Stashed changes
 
 }
   
