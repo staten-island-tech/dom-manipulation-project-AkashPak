@@ -16,15 +16,11 @@ const DomSelectors = {
   finaldesc: document.querySelector(".description"),
 };
 
-
+function Card() {
   DomSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    console.log(DomSelectors.Img.src)
-    DomSelectors.h3s.forEach(
-      (el)=> (el.textContent = DomSelectors.Img.src)
-    )
-    console.log(DomSelectors.AlbumDesc.value);
+    console, log(DomSelectors.AlbumDesc.value);
     DomSelectors.h2s.forEach(
       (el) => (el.textContent = DomSelectors.AlbumDesc.value)
     );
@@ -32,19 +28,32 @@ const DomSelectors = {
     console.log(DomSelectors.AlbumName.value);
     DomSelectors.h1s.forEach(
       (el) => (el.textContent = DomSelectors.AlbumName.value)
-    ); });
-
-
+    );
+  });
+}
+const imagead={
+  im: DomSelectors.Img.src
+}
 function Addcard(func){
 document.querySelector(".flex-container").insertAdjacentHTML("beforeend",
 `<div class="albumcard"
-<h1><h1>
-<h2><h2>
-  <img src= "${func.Img}" alt="" class="img"> 
+<h1 class="title"></h1>
+<h2 class="description"> </h2>
+  <img src= "${func.im}" alt="" class="img" > 
   <button class="rmvbtn">Delete</button>
   </div>`)
   const rembtn = document.querySelector(".rmvbtn");
-  rembtn.addEventListener("click", () => 
-  document.box.reload(func));
+  rembtn.addEventListener("click", () => rembtn.parentElement.remove(func));
   }
+DomSelectors.form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const FinCard = Card();
+  Addcard(FinCard);
+  remove();
+});
 
+function remove() {
+  DomSelectors.AlbumDesc.value = null;
+  DomSelectors.AlbumName.value = null;
+  DomSelectors.Img.src = null;
+}
