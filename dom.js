@@ -16,10 +16,17 @@ function Addcard() {
     <h1 class="title"> ${DomSelectors.AlbumName.value}</h1>
    <img src="${DomSelectors.Img.value}" alt="" class="image">
    <h2 class='descr'> ${DomSelectors.AlbumDesc.value}</h2>
-    <button class="btn" onclick="this.parentNode.remove()" >Remove</button>
+    <button class="btn">Remove</button>
   </div>`
   );
+const func= 
+document.querySelector(".btn").addEventListener(
+    "click", this.parentNode.remove())
+    console.log(func)
 }
+
+
+
 DomSelectors.form.addEventListener("submit", (e) => {
   e.preventDefault();
 
