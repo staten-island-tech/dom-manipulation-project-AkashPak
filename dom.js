@@ -9,6 +9,7 @@ const DomSelectors = {
   box: document.querySelector(".flex-container"),
 };
 
+<<<<<<< Updated upstream
 function Addcard() {
   DomSelectors.box.insertAdjacentHTML(
     "beforeend",
@@ -24,6 +25,25 @@ document.querySelector(".btn").addEventListener(
     "click", this.parentNode.remove())
     console.log(func)
 }
+=======
+
+  DomSelectors.form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    console.log(DomSelectors.Img.src)
+    DomSelectors.h3s.forEach(
+      (el)=> (el.src = DomSelectors.Img.src)
+    )
+    console.log(DomSelectors.AlbumDesc.value);
+    DomSelectors.h2s.forEach(
+      (el) => (el.textContent = DomSelectors.AlbumDesc.value)
+    );
+
+    console.log(DomSelectors.AlbumName.value);
+    DomSelectors.h1s.forEach(
+      (el) => (el.textContent = DomSelectors.AlbumName.value)
+    ); });
+>>>>>>> Stashed changes
 
 
 
