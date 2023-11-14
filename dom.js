@@ -7,9 +7,9 @@ const DomSelectors = {
   Img: document.querySelector(".album-cover"),
   AlbumDesc: document.querySelector(".album-descr"),
   box: document.querySelector(".flex-container"),
-};
+  button: document.querySelectorAll(".btn"),
 
-<<<<<<< Updated upstream
+};
 function Addcard() {
   DomSelectors.box.insertAdjacentHTML(
     "beforeend",
@@ -20,30 +20,19 @@ function Addcard() {
     <button class="btn">Remove</button>
   </div>`
   );
-const func= 
-document.querySelector(".btn").addEventListener(
-    "click", this.parentNode.remove())
-    console.log(func)
-}
-=======
+  
+  document.querySelectorAll(".btn").forEach(button=> {button.addEventListener("click", function  (){
+      button.parentNode.remove()})})
+   };
+  
+    
 
-  DomSelectors.form.addEventListener("submit", function (event) {
-    event.preventDefault();
 
-    console.log(DomSelectors.Img.src)
-    DomSelectors.h3s.forEach(
-      (el)=> (el.src = DomSelectors.Img.src)
-    )
-    console.log(DomSelectors.AlbumDesc.value);
-    DomSelectors.h2s.forEach(
-      (el) => (el.textContent = DomSelectors.AlbumDesc.value)
-    );
 
-    console.log(DomSelectors.AlbumName.value);
-    DomSelectors.h1s.forEach(
-      (el) => (el.textContent = DomSelectors.AlbumName.value)
-    ); });
->>>>>>> Stashed changes
+
+ 
+  
+  
 
 
 
