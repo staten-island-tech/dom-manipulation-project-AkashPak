@@ -20,19 +20,22 @@ function Addcard() {
     <button class="btn">Remove</button>
   </div>`
   );
-  
-  document.querySelectorAll(".btn").forEach(button=> {button.addEventListener("click", function  (){
-      button.parentNode.remove()})})
-   };
-  
-    
+
+  document.querySelectorAll(".btn").forEach(button => {
+    button.addEventListener("click", function () {
+      button.parentNode.remove()
+    })
+  })
+};
 
 
 
 
- 
-  
-  
+
+
+
+
+
 
 
 
